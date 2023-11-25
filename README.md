@@ -2,10 +2,10 @@
 ## An easy instruction to install cuda-toolkit and cuda-driver on Ubuntu 20.04/22.04
 
 1. Pre-installation
-	1-0. CUDA installation guide: `https://docs.nvidia.com/cuda/cuda-installation-guide-linux` <be>
-	1-1. CUDA-Capable GPU list: `https://developer.nvidia.com/cuda-gpus` <be>
-	1-2. Verify You Have a CUDA-Capable GPU: `lspci | grep -i nvidia` <be>
-	1-3. Verify You Have a Supported Version of Linux: `uname -m && cat /etc/*release` <be>
+	1-0. CUDA installation guide: `https://docs.nvidia.com/cuda/cuda-installation-guide-linux` <br>
+	1-1. CUDA-Capable GPU list: `https://developer.nvidia.com/cuda-gpus` <br>
+	1-2. Verify You Have a CUDA-Capable GPU: `lspci | grep -i nvidia` <br>
+	1-3. Verify You Have a Supported Version of Linux: `uname -m && cat /etc/*release` <br>
 	1-4. Verify the System Has gcc Installed: `gcc --version` <br> <br>
 
 2. Install cuda-toolkit and cuda-driver <br>
