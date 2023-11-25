@@ -1,5 +1,5 @@
 # CUDA Toolkit Installation
-## An easy instruction to install cuda-toolkit and cuda driver on Ubuntu 20.04/22.04
+## An easy instruction to install cuda-toolkit and cuda-driver on Ubuntu 20.04/22.04
 
 1. Pre-installation
 	1-0. CUDA installation guide: `https://docs.nvidia.com/cuda/cuda-installation-guide-linux` <br>
