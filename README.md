@@ -22,4 +22,39 @@
 		`export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}` <br>
 		`export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}` <br>
 	3-3. Re-open the terminal and check the cuda-toolkit: `nvcc --version` <br>
-	3-4. You can test whether it works correctly by creating a file with `'.cu'` extention containing the following code and run it (`nvcc -o cuda-test cuda-test.cu`): <br>
+	3-4. You can test whether it works correctly by creating a file with `'.cu'` extention containing the following code and run it (`nvcc -o cuda-test cuda-test.cu`): <br> <br>
+
+ ```
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+#include <stdio.h>
+
+#define CUDA_CHECK_ERROR(err) \
+    do { \
+        if (err != cudaSuccess) { \
+            fprintf(stderr, "CUDA error: %s, line %d\n", cudaGetErrorString(err), __LINE__); \
+            exit(EXIT_FAILURE); \
+        } \
+    } while (0)
+
+__global__ void hello_cuda()
+{
+    printf("Hello CUDA!\n");
+}
+
+int main()
+{
+    dim3 grid(2);
+    dim3 block(3);
+    
+    hello_cuda<<<grid, block>>>();
+    
+    cudaError_t cuda_err = cudaDeviceSynchronize();
+    CUDA_CHECK_ERROR(cuda_err);
+    
+    cuda_err = cudaDeviceReset();
+    CUDA_CHECK_ERROR(cuda_err);
+
+    return 0;
+}
+```
