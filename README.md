@@ -10,7 +10,7 @@
 
 2. Install cuda-toolkit and cuda-driver <br>
 	`https://developer.nvidia.com/cuda-downloads` <br>
-	2-0. Linux/x86-64/22.04/deb(local) <br>
+	2-0. Choose: `Linux/x86-64/22.04/deb(local)` <br>
 	2-1. Run all the commands under Best Installer section <br>
 	2-2. Run one of the options under Driver Installer section: `sudo apt-get install -y cuda-drivers` <br>
 	2-3. Reboot the system: `sudo reboot` <br> <br>
