@@ -22,7 +22,7 @@
 		`export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}` <br>
 		`export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}` <br>
 	3-3. Re-open the terminal and check the cuda-toolkit: `nvcc --version` <br>
-	3-4. You can test whether it works correctly by creating a file with `'.cu'` extention containing the following code and run it (`nvcc -o cuda-test cuda-test.cu`): <br> <br>
+	3-4. You can test whether it works correctly by creating a file with `'.cu'` extention containing the following code and run it, it should print `Hello CUDA!` six times (`nvcc -o cuda-test cuda-test.cu`): <br> <br>
 
  ```
 #include <cuda_runtime.h>
